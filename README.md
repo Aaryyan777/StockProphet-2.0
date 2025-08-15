@@ -52,15 +52,15 @@ The enhancements resulted in a dramatic improvement in the model's performance:
     -   A `param_grid` dictionary was defined to hold the hyperparameter search space.
     -   A loop was implemented to iterate through all parameter combinations and perform cross-validation for each.
 
-### What We Kept
+### What I Kept
 
-We retained the core structure of the original project, including:
+I retained the core structure of the original project, including:
 
 -   The use of the Prophet model.
 -   The data acquisition and basic preprocessing steps.
 -   The use of `joblib` for model persistence.
 
-### What We Removed/Replaced
+### What I Removed/Replaced
 
 -   **Hardcoded Hyperparameters:** The hardcoded `best_params` dictionary was replaced with a systematic grid search.
 
