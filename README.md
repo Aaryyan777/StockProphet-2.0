@@ -52,6 +52,32 @@ The enhancements resulted in a dramatic improvement in the model's performance:
     -   A `param_grid` dictionary was defined to hold the hyperparameter search space.
     -   A loop was implemented to iterate through all parameter combinations and perform cross-validation for each.
 
+### Comparison
+
+1. **Feature Engineering**
+
+Original: Only included SMA_10, SMA_30, and RSI.
+2.0: Added ATR, MACD, MACD signal, Bollinger Bands (upper/lower), and lag features (y_lag1, y_lag2, y_lag3).
+Comment: More features mean the model can capture richer price dynamics, trends, momentum, and volatility.
+
+2. **Hyperparameter Tuning**
+
+Original: Hardcoded best parameters (changepoint_prior_scale, seasonality_prior_scale) found manually.
+2.0: Implements systematic grid search with cross-validation to find the best parameters (changepoint_prior_scale, seasonality_prior_scale, holidays_prior_scale).
+Comment: Removes guesswork and adapts better to data.
+
+3. **Model Evaluation**
+
+Original: Rolling window CV with MAE, RMSE, MAPE, R², and directional accuracy.
+2.0: Keeps rolling window CV but also optimizes parameters before CV.
+Comment: This two-phase approach (tuning → CV) ensures you get a well-calibrated and robust model.
+
+4. Prediction Script
+
+Original predict.py: Only used SMA, RSI, and MA to predict.
+2.0 predict.py: Uses all advanced features and lagged prices for prediction, ensuring feature consistency between training and inference.
+Comment: Matches training features to prediction features.
+
 ### What I Kept
 
 I retained the core structure of the original project, including:
