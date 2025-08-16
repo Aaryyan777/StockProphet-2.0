@@ -70,17 +70,17 @@ The enhancements resulted in a dramatic improvement in the model's performance:
 
 3. **Model Evaluation**
 
-- Original: Rolling window CV with MAE, RMSE, MAPE, R², and directional accuracy.
-- 2.0: *Keeps rolling window CV but also optimizes parameters before CV.*
+   - Original:  Rolling window CV with MAE, RMSE, MAPE, R², and directional accuracy.
+   - 2.0:  **Keeps rolling window CV but also optimizes parameters before CV.**
 
-- **Comment**: This two-phase approach (tuning → CV) ensures you get a well-calibrated and robust model.
+   - **Comment**:  This two-phase approach (tuning → CV) ensures you get a well-calibrated and robust model.
 
 4. **Prediction Script**
    
-- Original predict.py: Only used SMA, RSI, and MA to predict.
-- 2.0 predict.py: *Uses all advanced features and lagged prices for prediction, ensuring feature consistency between training and inference.*
+   - Original predict.py:  Only used SMA, RSI, and MA to predict.
+   - 2.0 predict.py:  **Uses all advanced features and lagged prices for prediction, ensuring feature consistency between training and inference.**
 
-- **Comment**: Matches training features to prediction features.
+   - **Comment**: Matches training features to prediction features.
 
 ### What I Kept
 
