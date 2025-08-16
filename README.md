@@ -56,17 +56,17 @@ The enhancements resulted in a dramatic improvement in the model's performance:
 
 1. **Feature Engineering**
 
-- Original: Only included SMA_10, SMA_30, and RSI.
-- 2.0: *Added ATR, MACD, MACD signal, Bollinger Bands (upper/lower), and lag features (`y_lag1`, `y_lag2`, `y_lag3`).*
+   - Original:  Only included SMA_10, SMA_30, and RSI.
+   - 2.0:  *Added ATR, MACD, MACD signal, Bollinger Bands (upper/lower), and lag features (`y_lag1`, `y_lag2`, `y_lag3`).*
 
-- **Comment**: More features mean the model can capture richer price dynamics, trends, momentum, and volatility.
+   - **Comment**:  More features mean the model can capture richer price dynamics, trends, momentum, and volatility.
 
 2. **Hyperparameter Tuning**
 
-- Original: Hardcoded best parameters (changepoint_prior_scale, seasonality_prior_scale) found manually.
-- 2.0: *Implements systematic grid search with cross-validation to find the best parameters (`changepoint_prior_scale`, `seasonality_prior_scale`, `holidays_prior_scale`).*
+   - Original:  Hardcoded best parameters (changepoint_prior_scale, seasonality_prior_scale) found manually.
+   - 2.0:  *Implements systematic grid search with cross-validation to find the best parameters (`changepoint_prior_scale`, `seasonality_prior_scale`, `holidays_prior_scale`).*
 
-- **Comment**: Removes guesswork and adapts better to data.
+   - **Comment**: Removes guesswork and adapts better to data.
 
 3. **Model Evaluation**
 
