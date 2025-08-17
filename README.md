@@ -108,7 +108,7 @@ I retained the core structure of the original project, including:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/StockProphet-2.0.git
+    git clone https://github.com/Aaryyan777/StockProphet-2.0.git
     cd StockProphet-2.0
     ```
 2.  **Install the dependencies:**
